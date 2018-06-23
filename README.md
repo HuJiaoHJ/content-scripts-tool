@@ -1,7 +1,15 @@
 ```bash
-window.postMessage('', "*"); // 开始
-window.postMessage('昨天', "*"); // 开始，设置时间参数
-window.postMessage('13:08', "*"); // 开始，设置时间参数
+window.postMessage({
+    lastTime: '昨天',
+    hiText: 'hello。。。。'
+}, '*'); // 开始工作！！！
 
-window.postMessage('stop', "*"); // 结束执行
+window.postMessage('', "*"); // 开始，lastTime默认“昨天”，hiText默认那一段！！！
+
+window.postMessage({
+    lastTime: '13:08',
+    hiText: '。。。。'
+}, '*'); // 开始工作！！！
+
+window.postMessage('stop', "*"); // 提前结束
 ```
