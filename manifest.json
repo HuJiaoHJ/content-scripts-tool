@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "Boss Spider Devtool",
+  "description": "Boss Spider",
+  "version": "0.1",
+  "devtools_page": "devtools.html",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Boss Spider Devtools",
+    "default_popup": "popup.html"
+  }
+}
+
